@@ -105,7 +105,7 @@ console.log(contactInfo);
 const uni = [];
 
 for (i = 0; i < graduates.length; i++) {
-  if (graduates[i]['university'].indexOf("uni") !== -1) {
+  if (graduates[i]['university'].toLowerCase().indexOf('uni') !== -1) {
     uni.push(graduates[i]['university']);
   }
 }
