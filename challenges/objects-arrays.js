@@ -78,9 +78,11 @@ const graduates = [{"id":1,"first_name":"Cynde","university":"Missouri Southern 
 Once you have the new array created, sort the universities alphabetically and log the result. */
 const universities = [];
 
-graduates.forEach(function(graduates) {
+graduates.forEach((graduates) => {
   universities.push(graduates.university);
 })
+
+universities.sort();
 
 console.log(universities)
 
@@ -92,7 +94,7 @@ Name email@example.com
 Log the result of your new array. */
 const contactInfo = [];
 
-graduates.forEach(function(graduates) {
+graduates.forEach((graduates) => {
   contactInfo.push(`${graduates.first_name} ${graduates.email}`);
 })
 
@@ -103,7 +105,7 @@ console.log(contactInfo);
 const uni = [];
 
 for (i = 0; i < graduates.length; i++) {
-  if (graduates[i]['university'].indexOf("uni")) {
+  if (graduates[i]['university'].indexOf("uni") !== -1) {
     uni.push(graduates[i]['university']);
   }
 }
@@ -134,7 +136,7 @@ The zoo wants to display both the scientific name and the animal name in front o
 */
 const animalNames = [];
 
-zooAnimals.forEach(function(zooAnimals) {
+zooAnimals.forEach((zooAnimals) => {
   animalNames.push(`Name: ${zooAnimals.animal_name}, Scientific: ${zooAnimals.scientific_name}`)
 })
 
@@ -148,7 +150,7 @@ The zoos need a list of all their animal's names (names only, not scientific) co
 
 let lowerCase = [];
 
-lowerCase = zooAnimals.map(function(zooAnimals) {
+lowerCase = zooAnimals.map((zooAnimals) => {
   return zooAnimals.animal_name.toLowerCase();
 })
 
@@ -161,7 +163,7 @@ The zoos are concenred about animals with a lower population count. Find out whi
 */
 let lowerPopulation = [];
 
-lowerPopulation = zooAnimals.filter(function(zooAnimals) {
+lowerPopulation = zooAnimals.filter((zooAnimals) => {
   return zooAnimals.population < 5;
 })
 
@@ -174,7 +176,7 @@ The zoos need to know their total animal population across the United States.  F
 */
 let populationTotal = 0;
 
-populationTotal = zooAnimals.reduce(function(total, zooAnimals) {
+populationTotal = zooAnimals.reduce((total, zooAnimals) => {
   return total = total + zooAnimals.population
 }, 0)
 
