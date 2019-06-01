@@ -9,11 +9,11 @@
 // tyrannosaurus, carnivorous, 7000kg, 12m, Late Cretaceous
 
 const tyra = {
-  type: 'tyrannosaurus',
+  name: 'tyrannosaurus',
   diet: 'carnivorous',
   weight: '7000kg',
   length: '12m',
-  time: 'Late Cretaceous',
+  period: 'Late Cretaceous',
   roar: function() {
     return 'RAWERSRARARWERSARARARRRR!'
   }
@@ -22,21 +22,21 @@ const tyra = {
 // stegosaurus, herbivorous, 2000kg, 9m, Late Jurassic
 
 const steg = {
-  type: 'stegosaurus',
+  name: 'stegosaurus',
   diet: 'herbivorous',
   weight: '2000kg',
   length: '9m',
-  time: 'Late Jurassic'
+  period: 'Late Jurassic'
 }
 
 // velociraptor, carnivorous, 15kg, 1.8m, Late Cretaceous
 
 const velo = {
-  type: 'velociraptor',
+  name: 'velociraptor',
   diet: 'carnivorous',
   weight: '15kg',
   length: '1.8m',
-  time: 'Late Cretaceous'
+  period: 'Late Cretaceous'
 }
 
 // Using your dinosaur objects, log answers to these questions:
@@ -51,7 +51,7 @@ console.log(velo.diet);
 console.log(steg.length);
 
 // What time period did tyrannosaurus live in?
-console.log(tyra.time);
+console.log(tyra.period);
 
 
 // Create a new roar method for the tyrannosaurus.  When called, return "RAWERSRARARWERSARARARRRR!" Log the result.
@@ -105,13 +105,13 @@ console.log(contactInfo);
 const uni = [];
 
 for (i = 0; i < graduates.length; i++) {
-  if (graduates[i]['university'].toLowerCase().indexOf('uni') !== -1) {
+  if (graduates[i]['university'].indexOf('Uni') !== -1) {
     uni.push(graduates[i]['university']);
   }
 }
 
 console.log(uni);
-
+console.log(`Number of universities with "Uni" included in their name: ${uni.length}`)
 
 // ==== ADVANCED Array Methods ====
 
