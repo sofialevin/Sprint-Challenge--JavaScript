@@ -25,14 +25,14 @@ function multiply(num1, num2) {
   return num1 * num2;
 }
 
-function greeting(first, last) {
-  return `Hello ${first} ${last}, nice to meet you!`
+function greeting(first_name, last_name) {
+  return `Hello ${first_name} ${last_name}, nice to meet you!`
 }
 
 /* Step 3: Check your work by un-commenting the following calls to consume(): */
-consume(2,2,add); // 4
-consume(10,16,multiply); // 160
-consume("Mary","Poppins", greeting); // Hello Mary Poppins, nice to meet you!
+console.log(consume(2,2,add)); // 4
+console.log(consume(10,16,multiply)); // 160
+console.log(consume("Mary","Poppins", greeting)); // Hello Mary Poppins, nice to meet you!
 
 
 // ==== Closures ==== 
@@ -41,6 +41,7 @@ consume("Mary","Poppins", greeting); // Hello Mary Poppins, nice to meet you!
 
 // Explanation: 
 
+// When nestedFunction() is called, it has no context in its local scope for internal so it looks outside its scope to find it. Functions can access variables that are outside of its scope, but not ones that are inside of another nested function inside themselves.
 
 const external = "I'm outside the function";
 
@@ -55,4 +56,3 @@ function myFunction() {
 }
 myFunction();
 
-// When ‘nestedFunction()’ is called, it has no context in its local scope for internal so it looks outside its scope to find it. Functions can access variables that are outside of its scope, but not ones that are inside of another nested function inside themselves.
